@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "Master the art of creation, innovation, and exploration.",
 };
 
+export const viewport = 'width=device-width, initial-scale=1, maximum-scale=1';
+
 export default function RootLayout({
   children,
 }: Readonly<{

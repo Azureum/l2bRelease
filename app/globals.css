@@ -2,10 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../public/HelveticaNeue_Bold.ttf")
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+}
+
+// This shit is bugged out or smth
+@layer base {
+  html {
+    max-width: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
