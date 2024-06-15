@@ -16,7 +16,6 @@
 // This shit is bugged out or smth
 @layer base {
   html {
-    max-width: 100%;
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
@@ -31,6 +30,8 @@
 }
 
 body {
+  max-width: 100%;
+  overflow-x: hidden;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
