@@ -1,24 +1,60 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import logo from './components/ui/photos/mg.png';
 import { TextGenerateEffect } from "../app/components//ui/text-generate-effect";
 import { BackgroundBeams } from "../app/components/ui/background-beams";
 import { BackgroundGradient } from "../app/components/ui/background-gradient";
 import { BentoGrid, BentoGridItem } from "../app/components/ui/bento-grid";
+import { FlipWords } from "../app/components/ui/flip-words";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
+// make scroll up button
 export default function App() {
 return (
 <main className='App dark'>
+   <SpeedInsights/>
+   <Analytics/>
    <section>
-      <div className='w-screen h-screen grid md:grid-cols-2'>
-         <div className="grid h-screen place-items-center ">
+      <div className='grid md:grid-cols-2'>
+         <div className="grid h-screen place-items-center">
             <div>
-               <TextGenerateEffect words="Learn 2 Build's"/>
+               <TextGenerateEffect words="Learn 2 Build's" />
                <TextGenerateEffect words="2024 Hackathon" />
-               <h2 className = "opacity-0 text-xs" >ignore me just some free padding, learning react without any typescript / js / or any knowledge is hard 🤫</h2>
-               <button className="inline-flex w-[14vw] h-[12vh] animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] text-3xl font-mono text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 font-bold">
-               Sign up!
-               </button>
+               <div className="h-[3rem]  items-center px-1">
+                  <div className="text-5xl mx-auto font-normal text-neutral-400">
+                     Learn to<FlipWords words={["create", "innovate", "develop", "code", "invent", "master"]} />
+                  </div>
+               </div>
+               <h2 className="opacity-0 text-sm">ignore me just some free padding, learning react without any typescript / js / or any knowledge is hard, "Don't be evil" </h2>
+               <a href="https://forms.fillout.com/t/oPtnZqc5hZus" target="_blank" rel="noopener noreferrer">
+                  <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-2 text-base font-semibold leading-6 text-white inline-block">
+                     <span className="absolute inset-0 overflow-hidden rounded-full">
+                     <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                     </span>
+                     <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-1 px-6 ring-1 ring-white/10 ">
+                        <span>
+                        Sign up!
+                        </span>
+                        <svg
+                           fill="none"
+                           height="24"
+                           viewBox="0 0 24 24"
+                           width="24"
+                           xmlns="http://www.w3.org/2000/svg"
+                           >
+                           <path
+                              d="M10.75 8.75L14.25 12L10.75 15.25"
+                              stroke="currentColor"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="1.5"
+                              />
+                        </svg>
+                     </div>
+                     <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
+                  </button>
+               </a>
                <span className='pl-5 text-gray-500'>Join now and start hacking!</span>
             </div>
          </div>
@@ -29,14 +65,14 @@ return (
                      <p className="text-base sm:text-4xl text-black mt-4 mb-2 dark:text-neutral-200 font-bold">
                         Participants
                      </p>
-                     <p className="text-3xl dark:text-indigo-400	-200 font-bold">
+                     <p className="text-3xl inline-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
                         3,381
                      </p>
                      <p className="text-base sm:text-4xl text-black mt-4 mb-2 dark:text-neutral-200 font-bold">
                         Schedule
                      </p>
                      <p className="text-xl dark:text-neutral-200">
-                        The Hackathon will go from,  <span className='font-bold'>July 15 to September 20.</span> You can still become a participant  when the hackathon is active.
+                        The Hackathon will go from, <span className='font-bold'>July 15 to September 20.</span> You can still become a participant when the hackathon is active.
                      </p>
                      <p className="text-base sm:text-4xl text-black mt-4 mb-2 dark:text-neutral-200 font-bold">
                         Prize Pool
@@ -51,53 +87,74 @@ return (
          </div>
       </div>
    </section>
-   <section>
+   <section className="h-[60rem] w-full flex justify-center ">
+      <div className="text-center">
+         <h2 className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-xl md:text-2xl lg:text-4xl xl:text-6xl 2xl:text-8xl font-bold">
+            SPONSORS
+         </h2>
+         <span className='flex h-screen justify-center items-center'>
+         <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-7xl font-bold">TBD</h3>
+         </span>
+      </div>
+   </section>
+   <section className='pb-[5rem]'>
       <div>
          {/* Create one for contact, About, some statistics */}
-      <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          className={item.className}
-        />
-      ))}
-    </BentoGrid>
+         <BentoGrid className=" max-w-7xl mx-auto md:auto-rows-[25rem]">
+            {items.map((item, i) => (
+            <BentoGridItem
+               key = {i}
+               title={item.title}
+               description={item.description}
+               className={item.className}
+               />
+            ))}
+         </BentoGrid>
       </div>
+   </section>
+   <section className='h-1/5'>
+   </section>
+   <section className=''>
+   <div className = "text-neutral-600 pt-2 font-semibold ">Made with love by Matt 💖</div>
    </section>
    <BackgroundBeams />
 </main>
 );
 }
-const Skeleton = () => (
-   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
- );
- const items = [
+const items = [
    {
-     title: "The Dawn of Innovation",
-     description: "Explore the birth of groundbreaking ideas and inventions.",
-     header: <Skeleton />,
-     className: "md:col-span-2",
+     title: "🔎What is Learn 2 Build?",
+     description: (
+       <>
+         <p className="text-xl">Learn 2 Build is an international hackathon dedicated to fostering innovation, creativity, and collaboration among participants from around the globe. It aims to bring together developers, designers, and technology enthusiasts to work on projects to solve a collective problem.</p>
+         <p className="text-xl"><br/>Our participant's age ranges from middle schoolers to collegiate, though anyone is free to join. We also do not have a set theme or category, we ask participants to create a 2-and-a-half-minute-long video demonstrating their creation's functionality and purpose. You are also free to develop an idea and create a demo of the concept.</p>
+       </>
+     ),
+     className: "md:col-span-2 text-xl",
    },
-   {
-     title: "The Digital Revolution",
-     description: "Dive into the transformative power of technology.",
-     header: <Skeleton />,
-     className: "md:col-span-1",
-   },
-   {
-     title: "The Art of Design",
-     description: "Discover the beauty of thoughtful and functional design.",
-     header: <Skeleton />,
-     className: "md:col-span-1",
-   },
-   {
-     title: "The Power of Communication",
-     description:
-       "Understand the impact of effective communication in our lives.",
-     header: <Skeleton />,
-     className: "md:col-span-2",
-   },
- ];
+{
+title: "🤔What's a Hackathon?",
+description:  (
+   <>
+     <p></p>
+   </>
+ ),
+className: "md:col-span-1",
+},
+{
+title: "📧 Contact Us!",
+description: "Discover the beauty of thoughtful and functional design.",
+className: "md:col-span-1",
+},
+{
+title: "😸 Our Team",
+description:
+"Understand the impact of effective communication in our lives.",
+className: "md:col-span-1",
+},
+{
+title: "🧑 Judges",
+description: "TBD",
+className: "md:col-span-1",
+},
+];

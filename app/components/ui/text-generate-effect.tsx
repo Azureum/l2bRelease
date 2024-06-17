@@ -32,8 +32,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              // text-lg sm:text-md md:text-2xl lg:text-5xl xl:text-8xl font-mono
-              className="bg-gradient-to-r from-indigo-400 bg-clip-text text-transparent opacity-0 text-xl md:text-2xl lg:text-4xl xl:text-6xl 2xl:text-8xl"
+              className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent opacity-0 text-xl md:text-2xl lg:text-4xl xl:text-6xl 2xl:text-8xl"
               style={{
                 backgroundSize: '200% 200%',
                 backgroundPosition: '10% 30% 90%'
