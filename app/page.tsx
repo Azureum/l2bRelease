@@ -1,13 +1,16 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import { TextGenerateEffect } from "../app/components//ui/text-generate-effect";
+import { TextGenerateEffect } from "../app/components/ui/text-generate-effect";
 import { BackgroundBeams } from "../app/components/ui/background-beams";
 import { BackgroundGradient } from "../app/components/ui/background-gradient";
 import { BentoGrid, BentoGridItem } from "../app/components/ui/bento-grid";
 import { FlipWords } from "../app/components/ui/flip-words";
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
+
+
 // make scroll up button
 export default function App() {
 return (

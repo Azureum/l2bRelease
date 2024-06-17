@@ -2,23 +2,26 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Ratelimit } from '@upstash/ratelimit';
 import { kv } from '@vercel/kv';
 
+// Initialize the rate limiter
 const ratelimit = new Ratelimit({
   redis: kv,
   // 2 requests from the same IP in 6 seconds
-  limiter: Ratelimit.slidingWindow(2, '6 s'),
+  limiter: Ratelimit.slidingWindow(2, '6s'),
 });
 
 // Define which routes you want to rate limit
 export const config = {
-  matcher: '/',
+  matcher: '/',  // Apply to all routes
 };
 
 export default async function middleware(request: NextRequest) {
-  // You could alternatively limit based on user ID or similar
+  // Get the IP address from the request
   const ip = request.ip ?? '127.0.0.1';
-  const { success, pending, limit, reset, remaining } = await ratelimit.limit(
-    ip
-  );
+
+  // Check the rate limit
+  const { success } = await ratelimit.limit(ip);
+
+  // If the request exceeds the rate limit, redirect to /blocked
   return success
     ? NextResponse.next()
     : NextResponse.redirect(new URL('/blocked', request.url));
