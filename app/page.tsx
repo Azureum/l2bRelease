@@ -8,7 +8,6 @@ import { BentoGrid, BentoGridItem } from "../app/components/ui/bento-grid";
 import { FlipWords } from "../app/components/ui/flip-words";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-
 // make scroll up button
 export default function App() {
 return (
@@ -26,7 +25,9 @@ return (
                      Learn to<FlipWords words={["create", "innovate", "develop", "code", "invent", "master"]} />
                   </div>
                </div>
-               <h2 className="opacity-0 text-sm">ignore me just some free padding, learning react without any typescript / js / or any knowledge is hard, "Don't be evil" </h2>
+               <h2 className="opacity-0 text-sm">
+                  ignore me just some free padding, learning react without any typescript / js / or any knowledge is hard, &quot;Don&apos;t be evil&quot;
+               </h2>
                <a href="https://forms.fillout.com/t/oPtnZqc5hZus" target="_blank" rel="noopener noreferrer">
                   <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-2 text-base font-semibold leading-6 text-white inline-block">
                      <span className="absolute inset-0 overflow-hidden rounded-full">
@@ -93,7 +94,7 @@ return (
             SPONSORS
          </h2>
          <span className='flex h-screen justify-center items-center'>
-         <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-7xl font-bold">TBD</h3>
+            <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-7xl font-bold">TBD</h3>
          </span>
       </div>
    </section>
@@ -115,30 +116,35 @@ return (
    <section className='h-1/5'>
    </section>
    <section className=''>
-   <div className = "text-neutral-600 pt-2 font-semibold ">Made with love by Matt 💖</div>
+      <div className = "text-neutral-600 pt-2 font-semibold ">Made with love by Matt 💖</div>
    </section>
    <BackgroundBeams />
 </main>
 );
 }
 const items = [
-   {
-     title: "🔎What is Learn 2 Build?",
-     description: (
-       <>
-         <p className="text-xl">Learn 2 Build is an international hackathon dedicated to fostering innovation, creativity, and collaboration among participants from around the globe. It aims to bring together developers, designers, and technology enthusiasts to work on projects to solve a collective problem.</p>
-         <p className="text-xl"><br/>Our participant's age ranges from middle schoolers to collegiate, though anyone is free to join. We also do not have a set theme or category, we ask participants to create a 2-and-a-half-minute-long video demonstrating their creation's functionality and purpose. You are also free to develop an idea and create a demo of the concept.</p>
-       </>
-     ),
-     className: "md:col-span-2 text-xl",
-   },
+{
+title: "🔎What is Learn 2 Build?",
+description: (
+<>
+<p className="text-xl">
+   Learn 2 Build is an international hackathon dedicated to fostering innovation, creativity, and collaboration among participants from around the globe. It aims to bring together developers, designers, and technology enthusiasts to work on projects to solve a collective problem.
+</p>
+<p className="text-xl">
+   <br />
+   Our participant&apos;s age ranges from middle schoolers to collegiate, though anyone is free to join. We also do not have a set theme or category, we ask participants to create a 2-and-a-half-minute-long video demonstrating their creation&apos;s functionality and purpose. You are also free to develop an idea and create a demo of the concept.
+</p>
+</>
+),
+className: "md:col-span-2 text-xl",
+},
 {
 title: "🤔What's a Hackathon?",
 description:  (
-   <>
-     <p></p>
-   </>
- ),
+<>
+<p></p>
+</>
+),
 className: "md:col-span-1",
 },
 {
