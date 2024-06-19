@@ -9,7 +9,7 @@ const ratelimit = new Ratelimit({
   limiter: Ratelimit.slidingWindow(2, '5s'),
 });
 
-// Define which routes you want to rate limit
+// Define which routes you want to rate limit and check for mobile users
 export const config = {
   matcher: '/',  // Apply to all routes
 };
@@ -22,7 +22,19 @@ export default async function middleware(request: NextRequest) {
   const { success } = await ratelimit.limit(ip);
 
   // If the request exceeds the rate limit, redirect to /blocked
-  return success
-    ? NextResponse.next()
-    : NextResponse.redirect(new URL('/blocked', request.url));
+  if (!success) {
+    return NextResponse.redirect(new URL('/blocked', request.url));
+  }
+
+  // User-Agent detection for mobile devices
+  const userAgent = request.headers.get('user-agent');
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(userAgent || '');
+
+  // If a mobile user is detected, redirect to the mobile-specific URL
+  if (isMobile) {
+    return NextResponse.redirect('https://learn2build.xyz/mobile');
+  }
+
+  // Proceed with the response for non-mobile users
+  return NextResponse.next();
 }

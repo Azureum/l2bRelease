@@ -9,17 +9,14 @@ import { FlipWords } from "../app/components/ui/flip-words";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import ScrollButton from './components/scroll-to-top'; 
-
-
-
 // make scroll up button
 export default function App() {
-return (
+return(
 <main className='App dark'>
-<BackgroundBeams />
+   <BackgroundBeams />
    <SpeedInsights/>
    <Analytics/>
-   <ScrollButton /> 
+   <ScrollButton />
    <section>
       <div className='grid md:grid-cols-2'>
          <div className="grid h-screen place-items-center">
@@ -104,9 +101,9 @@ return (
       </div>
    </section>
    <section className=''>
-   <h2 className="flex justify-center font-bold bg-gradient-to-r from-indigo-100 via-purple-500 to-pink-500 bg-clip-text text-transparent text-xl md:text-2xl lg:text-4xl xl:text-6xl 2xl:text-8xl ">
-            FAQ
-         </h2>
+      <h2 className="flex justify-center font-bold bg-gradient-to-r from-indigo-100 via-purple-500 to-pink-500 bg-clip-text text-transparent text-xl md:text-2xl lg:text-4xl xl:text-6xl 2xl:text-8xl ">
+         FAQ
+      </h2>
       <div>
          <BentoGrid className=" max-w-7xl mx-auto md:auto-rows-[25rem]">
             {items.map((item, i) => (
@@ -156,9 +153,10 @@ title: "📧 Contact Us!",
 description: (
 <>
 <p className="text-xl font-bold ">
-Do you have any questions or concerns? Or are you interested in helping sponsor the event? <br/><br/>
+   Do you have any questions or concerns? Or are you interested in helping sponsor the event? <br/><br/>
    Shoot us an email at: <span className = "text-green-400 ">learn2hackathon@gmail.com</span> <br/> We&apos;ll respond in less than 24hrs!
-</p><br/><br/><br/><br/><br/>
+</p>
+<br/><br/><br/><br/><br/>
 <button onClick={() => window.open('mailto:learn2hackathon@gmail.com', '_blank')} className='text-3xl '>📧</button>
 </>
 ),
@@ -167,29 +165,29 @@ className: "md:col-span-1",
 {
 title: "😸 Our Team",
 description:(
-   <>
-   <p className="text-2xl font-bold">
+<>
+<p className="text-2xl font-bold">
    ✨Matthew Mei
-   </p>
-   <p className="text-xl">
+</p>
+<p className="text-xl">
    &ensp;Founder | Technology Lead
-      <br />
-   </p>
-   <p className="text-2xl font-bold">
+   <br />
+</p>
+<p className="text-2xl font-bold">
    ✨Matthew Lin
-   </p>
-   <p className="text-xl">
+</p>
+<p className="text-xl">
    &ensp;Chief Marketing Officer
-      <br />
-   </p>
-   <p className="text-2xl font-bold">
+   <br />
+</p>
+<p className="text-2xl font-bold">
    ✨Danny Zhong
-   </p>
-   <p className="text-xl">
+</p>
+<p className="text-xl">
    &ensp;Business Development Manager
-      <br />
-   </p>
-   </>),
+   <br />
+</p>
+</>),
 className: "md:col-span-1",
 },
 {
@@ -197,10 +195,10 @@ title: "🧑 Judges",
 description: (
 <>
 <p className = "text-9xl text-green-500">
-TBD🔄
+   TBD🔄
 </p>
 </>
-   ),
+),
 className: "md:col-span-1",
 },
 ];
