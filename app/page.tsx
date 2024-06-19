@@ -8,6 +8,7 @@ import { BentoGrid, BentoGridItem } from "../app/components/ui/bento-grid";
 import { FlipWords } from "../app/components/ui/flip-words";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import ScrollButton from './components/scroll-to-top'; 
 
 
 
@@ -15,8 +16,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 export default function App() {
 return (
 <main className='App dark'>
+<BackgroundBeams />
    <SpeedInsights/>
    <Analytics/>
+   <ScrollButton /> 
    <section>
       <div className='grid md:grid-cols-2'>
          <div className="grid h-screen place-items-center">
@@ -70,7 +73,7 @@ return (
                         Participants
                      </p>
                      <p className="text-3xl inline-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
-                        3,381
+                        4
                      </p>
                      <p className="text-base sm:text-4xl text-black mt-4 mb-2 dark:text-neutral-200 font-bold">
                         Schedule
@@ -82,8 +85,7 @@ return (
                         Prize Pool
                      </p>
                      <p className="text-xl dark:text-neutral-200">
-                        $25,000 USD +
-                        Other Awards
+                        To be determined.
                      </p>
                   </BackgroundGradient>
                </div>
@@ -101,9 +103,11 @@ return (
          </span>
       </div>
    </section>
-   <section className='pb-[5rem]'>
+   <section className=''>
+   <h2 className="flex justify-center font-bold bg-gradient-to-r from-indigo-100 via-purple-500 to-pink-500 bg-clip-text text-transparent text-xl md:text-2xl lg:text-4xl xl:text-6xl 2xl:text-8xl ">
+            FAQ
+         </h2>
       <div>
-         {/* Create one for contact, About, some statistics */}
          <BentoGrid className=" max-w-7xl mx-auto md:auto-rows-[25rem]">
             {items.map((item, i) => (
             <BentoGridItem
@@ -116,12 +120,9 @@ return (
          </BentoGrid>
       </div>
    </section>
-   <section className='h-1/5'>
+   <section>
+      <div className = "text-neutral-600 font-semibold p-2">Made with love by Matt 💖</div>
    </section>
-   <section className=''>
-      <div className = "text-neutral-600 pt-2 font-semibold ">Made with love by Matt 💖</div>
-   </section>
-   <BackgroundBeams />
 </main>
 );
 }
@@ -131,7 +132,7 @@ title: "🔎What is Learn 2 Build?",
 description: (
 <>
 <p className="text-xl">
-   Learn 2 Build is an international hackathon dedicated to fostering innovation, creativity, and collaboration among participants from around the globe. It aims to bring together developers, designers, and technology enthusiasts to work on projects to solve a collective problem.
+   Learn 2 Build is an international hackathon dedicated to encouraging innovation, creativity, collaboration, as well as social change among participants from around the globe. It aims to bring together developers, designers, and technology enthusiasts to work on projects to solve a collective problem.
 </p>
 <p className="text-xl">
    <br />
@@ -145,25 +146,61 @@ className: "md:col-span-2 text-xl",
 title: "🤔What's a Hackathon?",
 description:  (
 <>
-<p></p>
+<p className="text-xl font-">A hackathon or codefest is a competition which participants can choose to team up to solve problems by creating software solutions. These events are usually centered around a topic or goal, though our hackathon doesn&apos;t have such theme we heavily encourage participants to create an app promoting social change. </p>
 </>
 ),
 className: "md:col-span-1",
 },
 {
 title: "📧 Contact Us!",
-description: "Discover the beauty of thoughtful and functional design.",
+description: (
+<>
+<p className="text-xl font-bold ">
+Do you have any questions or concerns? Or are you interested in helping sponsor the event? <br/><br/>
+   Shoot us an email at: <span className = "text-green-400 ">learn2hackathon@gmail.com</span> <br/> We&apos;ll respond in less than 24hrs!
+</p><br/><br/><br/><br/><br/>
+<button onClick={() => window.open('mailto:learn2hackathon@gmail.com', '_blank')} className='text-3xl '>📧</button>
+</>
+),
 className: "md:col-span-1",
 },
 {
 title: "😸 Our Team",
-description:
-"Understand the impact of effective communication in our lives.",
+description:(
+   <>
+   <p className="text-2xl font-bold">
+   ✨Matthew Mei
+   </p>
+   <p className="text-xl">
+   &ensp;Founder | Technology Lead
+      <br />
+   </p>
+   <p className="text-2xl font-bold">
+   ✨Matthew Lin
+   </p>
+   <p className="text-xl">
+   &ensp;Chief Marketing Officer
+      <br />
+   </p>
+   <p className="text-2xl font-bold">
+   ✨Danny Zhong
+   </p>
+   <p className="text-xl">
+   &ensp;Business Development Manager
+      <br />
+   </p>
+   </>),
 className: "md:col-span-1",
 },
 {
 title: "🧑 Judges",
-description: "TBD",
+description: (
+<>
+<p className = "text-9xl text-green-500">
+TBD🔄
+</p>
+</>
+   ),
 className: "md:col-span-1",
 },
 ];
