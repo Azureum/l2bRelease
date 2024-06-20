@@ -76,7 +76,7 @@ return(
                         Schedule
                      </p>
                      <p className="text-xl dark:text-neutral-200">
-                        The Hackathon will go from, <span className='font-bold'>July 20 to September 25.</span> You can still become a participant when the hackathon is active.
+                        The Hackathon will go from, <span className='font-bold'>July 25 to September 30.</span> You can still become a participant when the hackathon is active.
                      </p>
                      <p className="text-base sm:text-4xl text-black mt-4 mb-2 dark:text-neutral-200 font-bold">
                         Prize Pool
