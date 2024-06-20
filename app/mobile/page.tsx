@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function Blocked() {
-  document.body.style.overflow = 'hidden';
+  useEffect(() => {
+    // Set overflow to 'hidden' when the component mounts
+    document.body.style.overflow = 'hidden';
+    
+    // Reset overflow to 'auto' when the component unmounts
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
   return (
     <div className="flex h-screen justify-center items-center">
       <div className="text-center">
