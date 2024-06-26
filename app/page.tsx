@@ -9,6 +9,10 @@ import { FlipWords } from "../app/components/ui/flip-words";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import ScrollButton from './components/scroll-to-top'; 
+import xyzLogo from '../public/xyz-logo-white.png';
+import aopsLogo from '../public/AoPS_Main_Logo.png';
+import axureLogo from '../public/Axure_logo_400@2x.png';
+
 // make scroll up button
 export default function App() {
 return(
@@ -95,9 +99,17 @@ return(
          <h2 className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-xl md:text-2xl lg:text-4xl xl:text-6xl 2xl:text-8xl font-bold">
             SPONSORS
          </h2>
-         <span className='flex h-screen justify-center items-center'>
-            <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-7xl font-bold">TBD</h3>
-         </span>
+         <div className='flex justify-center items-center'>
+          <a href="https://gen.xyz/" className="pl-[2rem] pr-[2rem] pt-[2rem]">
+            <Image src={xyzLogo} alt="XYZ Logo" width={400} height={240} className='w-[20rem] h-[12rem]' />
+          </a>
+          <a href="https://artofproblemsolving.com/" className="pl-[2rem] pr-[2rem] pt-[2rem]">
+            <Image src={aopsLogo} alt="AoPS Logo" width={700} height={240} className='w-[35rem] h-[12rem]' />
+          </a>
+          <a href="https://www.axure.com/" className="pl-[2rem] pr-[2rem] pt-[2rem]">
+            <Image src={axureLogo} alt="Axure Logo" width={700} height={240} className='w-[35rem] h-[10rem]' />
+          </a>
+        </div>
       </div>
    </section>
    <section className=''>
