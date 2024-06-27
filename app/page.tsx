@@ -12,6 +12,7 @@ import ScrollButton from './components/scroll-to-top';
 import xyzLogo from '../public/xyz-logo-white.png';
 import aopsLogo from '../public/AoPS_Main_Logo.png';
 import axureLogo from '../public/Axure_logo_400@2x.png';
+import desmosLogo from "../public/DesmosLogo-W.png";
 
 // make scroll up button
 export default function App() {
@@ -108,6 +109,11 @@ return(
           </a>
           <a href="https://www.axure.com/" className="pl-[2rem] pr-[2rem] pt-[2rem]">
             <Image src={axureLogo} alt="Axure Logo" width={700} height={240} className='w-[35rem] h-[10rem]' />
+          </a>
+        </div>
+        <div className='flex justify-center items-center pt-[2rem]'>
+          <a href="https://www.desmos.com/" className="[2rem] pr-[2rem] pt-[2rem]">
+            <Image src={desmosLogo} alt="Desmos Logo" width={400} height={240} className='w-[30rem] h-[8rem]' />
           </a>
         </div>
       </div>
