@@ -212,8 +212,12 @@ className: "md:col-span-1",
 title: "🧑 Judges",
 description: (
 <>
-<p className = "text-9xl text-green-500">
-   TBD🔄
+<p className = "text-2xl font-bold">
+✨Darren Chen
+</p>
+<p className="text-xl">
+   &ensp;CS @ Yale
+   <br />
 </p>
 </>
 ),
