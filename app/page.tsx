@@ -13,6 +13,8 @@ import xyzLogo from '../public/xyz-logo-white.png';
 import aopsLogo from '../public/AoPS_Main_Logo.png';
 import axureLogo from '../public/Axure_logo_400@2x.png';
 import desmosLogo from "../public/DesmosLogo-W.png";
+import InterviewCake from "../public/cake_logo_white.png";
+import NordLogo from "../public/NordVPN_Logo_RGB_Primary_Blue_White.png"
 
 // make scroll up button
 export default function App() {
@@ -36,7 +38,7 @@ return(
                <h2 className="opacity-0 text-sm">
                   ignore me just some free padding, learning react without any typescript / js / or any knowledge is hard, &quot;Don&apos;t be evil&quot;
                </h2>
-               <a href="https://forms.fillout.com/t/oPtnZqc5hZus" target="_blank" rel="noopener noreferrer">
+               <a href="https://learn-2-build.devpost.com" target="_blank" rel="noopener noreferrer">
                   <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-2 text-base font-semibold leading-6 text-white inline-block">
                      <span className="absolute inset-0 overflow-hidden rounded-full">
                      <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -75,7 +77,7 @@ return(
                         Participants
                      </p>
                      <p className="text-3xl inline-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
-                        4
+                        7
                      </p>
                      <p className="text-base sm:text-4xl text-black mt-4 mb-2 dark:text-neutral-200 font-bold">
                         Schedule
@@ -113,7 +115,13 @@ return(
         </div>
         <div className='flex justify-center items-center pt-[2rem]'>
           <a href="https://www.desmos.com/" className="[2rem] pr-[2rem] pt-[2rem]">
-            <Image src={desmosLogo} alt="Desmos Logo" width={400} height={240} className='w-[30rem] h-[8rem]' />
+            <Image src={desmosLogo} alt="Desmos Logo" width={400} height={240} className='w-[25rem] h-[6rem]' />
+          </a>
+          <a href="https://www.interviewcake.com/" className="[2rem] pr-[2rem] pt-[2rem]">
+            <Image src={InterviewCake} alt="InterviewCake Logo" width={400} height={240} className='w-[35rem] h-[6rem]' />
+          </a>
+          <a href="https://nordvpn.com/" className="[2rem] pr-[2rem] pt-[2rem]">
+            <Image src={NordLogo} alt="NordVPN Logo" width={400} height={240} className='w-[35rem] h-[18rem]' />
           </a>
         </div>
       </div>
@@ -216,7 +224,7 @@ description: (
 ✨Darren Chen
 </p>
 <p className="text-xl">
-   &ensp;CS @ Yale
+   &ensp;CS & Electrical Engineering @ Yale
    <br />
 </p>
 </>
