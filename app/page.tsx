@@ -14,7 +14,9 @@ import aopsLogo from '../public/AoPS_Main_Logo.png';
 import axureLogo from '../public/Axure_logo_400@2x.png';
 import desmosLogo from "../public/DesmosLogo-W.png";
 import InterviewCake from "../public/cake_logo_white.png";
-import NordLogo from "../public/NordVPN_Logo_RGB_Primary_Blue_White.png"
+import NordLogo from "../public/NordVPN_Logo_RGB_Primary_Blue_White.png";
+import NordPass from "../public/NordPass-white-vertical(1).png";
+import Incogni from "../public/incogni_white.png";
 
 // make scroll up button
 export default function App() {
@@ -124,6 +126,14 @@ return(
             <Image src={NordLogo} alt="NordVPN Logo" width={400} height={240} className='w-[35rem] h-[18rem]' />
           </a>
         </div>
+        <div className='flex justify-center items-center'>
+          <a href="https://incogni.com/" className="[2rem] pr-[2rem] pt-[2rem]">
+            <Image src={Incogni} alt="Incogni Logo" width={400} height={240} className='w-[30rem] h-[10rem]' />
+          </a>
+          <a href="https://nordpass.com/" className="[2rem] pr-[2rem] pt-[2rem]">
+            <Image src={NordPass} alt="NordPass Logo" width={400} height={240} className='w-[15rem] h-[15rem]' />
+          </a>
+          </div>
       </div>
    </section>
    <section className=''>
@@ -225,6 +235,20 @@ description: (
 </p>
 <p className="text-xl">
    &ensp;CS & Electrical Engineering @ Yale
+   <br />
+</p>
+<p className = "text-2xl font-bold">
+🤵Gaurav Mittal
+</p>
+<p className="text-xl">
+   &ensp;IT Manager - Data Science @ ThermoFisher Scientific
+   <br />
+</p>
+<p className = "text-2xl font-bold">
+🔨Anujkumarsinh Donvir
+</p>
+<p className="text-xl">
+   &ensp;Lead Application Developer @ ADP
    <br />
 </p>
 </>
