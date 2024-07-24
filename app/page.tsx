@@ -251,6 +251,20 @@ description: (
    &ensp;Lead Application Developer @ ADP
    <br />
 </p>
+<p className = "text-2xl font-bold">
+⚡ Kunvar Chokshi
+</p>
+<p className="text-xl">
+   &ensp;Staff Embedded Software Engineer @ Tesla 
+   <br />
+</p>
+<p className = "text-2xl font-bold">
+🛡️Nurzhan Nogerbek
+</p>
+<p className="text-xl">
+   &ensp;Lead Software Engineer @ Nomios
+   <br />
+</p>
 </>
 ),
 className: "md:col-span-1",
