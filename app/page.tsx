@@ -79,7 +79,7 @@ return(
                         Participants
                      </p>
                      <p className="text-3xl inline-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
-                        28
+                        38
                      </p>
                      <p className="text-base sm:text-4xl text-black mt-4 mb-2 dark:text-neutral-200 font-bold">
                         Schedule
@@ -230,40 +230,39 @@ className: "md:col-span-1",
 title: "🧑 Judges",
 description: (
 <>
-<p className = "text-2xl font-bold">
+<p className = "text-xl font-bold">
 ✨Darren Chen
 </p>
-<p className="text-xl">
+<p className="text-lg">
    &ensp;CS & Electrical Engineering @ Yale
    <br />
 </p>
-<p className = "text-2xl font-bold">
+<p className = "text-xl font-bold">
 🤵Gaurav Mittal
 </p>
-<p className="text-xl">
-   &ensp;IT Manager - Data Science @ ThermoFisher Scientific
-   <br />
+<p className="text-lg">
+   &ensp;IT Manager - Data Science @ Thermo Fisher 
 </p>
-<p className = "text-2xl font-bold">
+<p className="text-lg">
+   &ensp;Scientific
+   </p>
+<p className = "text-xl font-bold">
 🔨Anujkumarsinh Donvir
 </p>
-<p className="text-xl">
+<p className="text-lg">
    &ensp;Lead Application Developer @ ADP
-   <br />
 </p>
-<p className = "text-2xl font-bold">
+<p className = "text-xl font-bold">
 ⚡ Kunvar Chokshi
 </p>
-<p className="text-xl">
+<p className="text-lg">
    &ensp;Staff Embedded Software Engineer @ Tesla 
-   <br />
 </p>
-<p className = "text-2xl font-bold">
+<p className = "text-xl font-bold">
 🛡️Nurzhan Nogerbek
 </p>
-<p className="text-xl">
+<p className="text-lg">
    &ensp;Lead Software Engineer @ Nomios
-   <br />
 </p>
 </>
 ),
