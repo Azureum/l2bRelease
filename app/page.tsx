@@ -79,7 +79,7 @@ return(
                         Participants
                      </p>
                      <p className="text-3xl inline-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
-                        80
+                        97
                      </p>
                      <p className="text-base sm:text-4xl text-black mt-4 mb-2 dark:text-neutral-200 font-bold">
                         Schedule
